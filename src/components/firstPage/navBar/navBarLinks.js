@@ -1,7 +1,7 @@
 import React from "react";
 
 export const links = [
-  { name: "Home", link: "#education", target: "" },
+  { name: "Home", link: "#name", target: "" },
   { name: "Projects", link: "#", target: "" },
   {
     name: "Resume",
