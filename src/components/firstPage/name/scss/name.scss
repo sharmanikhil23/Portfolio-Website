@@ -1,0 +1,81 @@
+#name {
+  background: radial-gradient(circle at 13% 17%, #202022 0, #000 100%);
+  padding: 3rem 5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  #name-into {
+    font-size: 1.3rem;
+  }
+  #full-name {
+    font-size: 6rem;
+    margin: 4rem 0rem;
+    background-image: linear-gradient(
+      110.7deg,
+      rgba(255, 81, 47, 1) 1.7%,
+      rgba(255, 167, 47, 1) 8.2%,
+      rgba(218, 253, 1, 1) 16.2%,
+      rgba(98, 234, 20, 1) 23.4%,
+      rgba(69, 193, 42, 1) 32.8%,
+      rgba(7, 249, 149, 1) 43.7%,
+      rgba(6, 200, 217, 1) 55.3%,
+      rgba(18, 51, 233, 1) 65.5%,
+      rgba(122, 59, 202, 1) 74.5%,
+      rgba(231, 7, 249, 1) 82.3%,
+      rgba(202, 59, 163, 1) 91.4%
+    );
+
+    background-clip: text;
+    background-size: 600%;
+    color: transparent;
+    animation: bg-animation 10s infinite alternate;
+  }
+
+  @keyframes bg-animation {
+    0% {
+      background-position: left;
+    }
+    25% {
+      background-position: top;
+    }
+    50% {
+      background-position: right;
+    }
+    75% {
+      background-position: bottom;
+    }
+    100% {
+      background-position: center;
+    }
+  }
+  #name-description {
+    display: block;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    word-spacing: 0.3rem;
+    white-space: pre-wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #name {
+    padding: 3rem 2rem;
+    #name-into {
+      font-size: 1.1rem;
+    }
+    #full-name {
+      font-size: 4rem;
+      margin: 3rem 0rem;
+    }
+    #name-description {
+      font-size: 1.1rem;
+      word-spacing: 0.1rem;
+    }
+  }
+}
+@media screen and (max-width: 300px) {
+  #name {
+    padding: 3rem 1rem;
+  }
+}
