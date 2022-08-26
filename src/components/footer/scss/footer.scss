@@ -51,10 +51,10 @@
 
 @media screen and (max-width: 800px) {
   #social-links {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
     h3 {
       font-size: 1.3rem;
     }

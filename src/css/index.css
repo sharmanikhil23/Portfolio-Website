@@ -9,7 +9,7 @@ body {
   height: 100%;
   width: 100%;
   scroll-behavior: smooth;
-  background-color: #171718;
+  background: radial-gradient(circle at 13% 17%, #202022 0, #000 100%);
 }
 body div {
   height: 100%;
