@@ -6,18 +6,19 @@
   margin: 2rem 0rem;
 }
 #project-area #projects {
-  display: flex;
-  flex-direction: row;
+  margin-bottom: 1rem;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: auto auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
 }
 #project-area #projects #project {
   margin: 1rem 0rem;
   border-width: 2px solid black;
   border-radius: 5px;
-  width: 49%;
+  width: 100%;
   padding: 1rem;
   background-color: #141414;
   display: flex;
@@ -27,7 +28,7 @@
 }
 #project-area #projects #project img {
   width: 100%;
-  height: 35%;
+  height: auto !important;
   border-radius: 5px;
 }
 #project-area #projects #project h2 {
@@ -58,9 +59,7 @@
 
 @media screen and (max-width: 1000px) {
   #projects {
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: stretch !important;
+    grid-template-columns: auto !important;
   }
   #projects #project {
     width: 100% !important;
