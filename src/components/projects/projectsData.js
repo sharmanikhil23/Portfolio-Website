@@ -18,7 +18,7 @@ const projectData = [
   },
   {
     image: project2,
-    heading: "To-Do Wesite",
+    heading: "To-Do App",
     description:
       "Build the complete full stack website with the help of the MERN stack by using NodeJs, Express in the back end along with the mongoDb and on the frount end using the html, css, js, React, Scss with authentication system which will keep your notes personal. \n To test it you can use any email eg nikhil@abc.ca and any passwords 123456789",
     giticon: <BsGithub></BsGithub>,
