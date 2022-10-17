@@ -11,7 +11,7 @@ body {
   scroll-behavior: smooth;
   background: radial-gradient(circle at 13% 17%, #202022 0, #000 100%);
 }
-body div {
+body #root {
   height: 100%;
   width: 100%;
   color: hsla(0deg, 0%, 100%, 0.85);
