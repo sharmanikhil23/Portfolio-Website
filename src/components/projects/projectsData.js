@@ -4,6 +4,7 @@ import { RiLiveFill } from "react-icons/ri";
 //
 import project1 from "./images/project1.png";
 import project2 from "./images/project2.png";
+import project3 from "./images/project3.png";
 
 const projectData = [
   {
@@ -25,6 +26,16 @@ const projectData = [
     liveicon: <RiLiveFill></RiLiveFill>,
     live: "https://to-do-list-by-nikhil.netlify.app",
     link: "https://github.com/sharmanikhil23/To-Do-FrountEnd",
+  },
+  {
+    image: project3,
+    heading: "Weather Api",
+    description:
+      "A Custom build api used to fetch weather and also running live so you can try it. Instructions are avaliable on gitHub",
+    giticon: <BsGithub></BsGithub>,
+    liveicon: <RiLiveFill></RiLiveFill>,
+    live: "https://sharmanikhil-weather-app.herokuapp.com/",
+    link: "https://github.com/sharmanikhil23/weatherApp",
   },
 ];
 
