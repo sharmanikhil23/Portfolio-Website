@@ -5,7 +5,7 @@ export const links = [
   { name: "Projects", link: "#project-area", target: "" },
   {
     name: "Resume",
-    link: "https://docs.google.com/document/d/1-5EYr5l0uOtoPlhFO3FOt16gZ45l0V5Oezyl6V3XWDU/edit?usp=sharing",
+    link: "https://drive.google.com/file/d/1YSlR4unSJWeuLmh6FEz5FbHm1OM5LTn_/view?usp=sharing",
     target: "_blank",
   },
   { name: "Contact", link: "#footer", target: "" },
