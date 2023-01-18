@@ -2,11 +2,22 @@ import { BsGithub } from "react-icons/bs";
 import { RiLiveFill } from "react-icons/ri";
 
 //
+import project0 from "./images/project0.png";
 import project1 from "./images/project1.png";
 import project2 from "./images/project2.png";
 import project3 from "./images/project3.png";
 
 const projectData = [
+  {
+    image: project0,
+    heading: " Sorting Algorithm Visualiser",
+    description:
+      "Developed a web app in which you can visualize the sorting Algorithm with Reach, js, scss",
+    giticon: <BsGithub></BsGithub>,
+    liveicon: <RiLiveFill></RiLiveFill>,
+    link: "https://github.com/sharmanikhil23/algorithmVisualiser",
+    live: "https://sorting-algorithm-visualiser-react.netlify.app/",
+  },
   {
     image: project1,
     heading: " Portfolio Website",
