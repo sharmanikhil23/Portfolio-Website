@@ -5,32 +5,18 @@ import { FirstPage } from "../firstPage/firstPage";
 import { Footer } from "../footer/footer";
 import { Projects } from "../projects/projects";
 import { Loading } from "./loading";
-
+import $ from "jquery";
 const Completed = () => {
-  const [playAnimation, setPlayAnimation] = useState(true);
-  useEffect(() => {
-    const onPageLoad = () => {
-      setPlayAnimation(false);
-    };
+  const [playAnimation, setPlayAnimation] = useState(false);
 
-    // Check if the page has already loaded
-    if (document.readyState === "complete") {
-      onPageLoad();
-    } else {
-      window.addEventListener("load", onPageLoad);
-      // Remove the event listener when component unmounts
-      return () => window.removeEventListener("load", onPageLoad);
-    }
+  useEffect(() => {
+    setPlayAnimation(true);
+    setTimeout(() => {
+      setPlayAnimation(false);
+    }, 500);
   }, []);
-  return playAnimation === true ? (
-    <Loading></Loading>
-  ) : (
-    <>
-      <FirstPage></FirstPage>
-      <Projects></Projects>
-      <Footer></Footer>
-    </>
-  );
+
+  return playAnimation === true ? <Loading></Loading> : <Data></Data>;
 
   //const [playAnimation, setPlayAnimation] = useState(true);
   // const temp = (
@@ -59,4 +45,14 @@ const Completed = () => {
 
 export const Complete = () => {
   return <Completed></Completed>;
+};
+
+const Data = () => {
+  return (
+    <div id="completeDoc">
+      <FirstPage></FirstPage>
+      <Projects></Projects>
+      <Footer></Footer>
+    </div>
+  );
 };
