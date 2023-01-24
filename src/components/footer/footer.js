@@ -6,22 +6,19 @@ import React from "react";
  */
 import socialsData from "./socialsList";
 
-/**
- * importing Css
- */
-import "./css/footer.css";
-
 export const Footer = () => {
   return (
-    <section id="footer">
-      <h3>
-        Feel free to reach out on socials if you're interested in working
-        together, being friends or have some suggestion.
-      </h3>
-      <section id="social-links">
-        <Socials></Socials>
+    <div id="footer-area-start">
+      <section id="footer">
+        <h3>
+          Feel free to reach out on socials if you're interested in working
+          together, being friends or have some suggestion.
+        </h3>
+        <section id="social-links">
+          <Socials></Socials>
+        </section>
       </section>
-    </section>
+    </div>
   );
 };
 

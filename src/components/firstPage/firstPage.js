@@ -5,14 +5,25 @@ import React from "react";
  */
 import { NavBar } from "./navBar/navBar";
 import { Name } from "./name/name";
-import { Education } from "./education/education";
+import { Education } from "../education/education";
 
 export const FirstPage = () => {
   return (
     <>
-      <NavBar></NavBar>
-      <Name></Name>
-      <Education></Education>
+      <div id="main-page">
+        <div id="main">
+          <NavBar></NavBar>
+          <Name></Name>
+        </div>
+        <div id="bg-animation-start">
+          <div class="bg-animation">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div id="stars4"></div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

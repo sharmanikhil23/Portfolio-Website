@@ -2,12 +2,6 @@ import React from "react";
 import logo from "./logo.png";
 
 /**
- * importing the css
- */
-import "./css/navBar.css";
-import "./css/color.css";
-
-/**
  * importing all the components
  */
 import { links } from "./navBarLinks";

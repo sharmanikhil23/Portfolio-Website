@@ -1,10 +1,5 @@
 import React from "react";
 
-/**
- * importing css
- */
-import "./css/name.css";
-
 export const Name = () => {
   return (
     <section id="name">

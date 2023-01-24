@@ -1,0 +1,170 @@
+@import "./color";
+@import "./helper";
+
+#main-page {
+  opacity: 0.9;
+  background: $background-first;
+  width: 100%;
+  min-height: 100vh;
+  #main {
+    min-height: 100vh;
+    @include visualWidth;
+    display: flex;
+    flex-direction: column;
+
+    .navbar {
+      padding: 0.5rem 0rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        width: 100px;
+      }
+      .navbar-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        @include navElements;
+      }
+      .secondary-navbar {
+        display: none;
+        .secondary-navbar-links {
+          color: $color;
+          background-color: black;
+          position: absolute;
+          right: 1rem;
+          min-width: 210px;
+          padding: 2rem;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          top: 7rem;
+          box-shadow: 0px 8px 16px 0px rgba(241, 236, 236, 0.2);
+          border-radius: 10px;
+          z-index: 2;
+          h3 {
+            line-height: 1rem;
+            padding: 5px;
+            font-weight: 400;
+            cursor: pointer;
+            a {
+              text-decoration: none;
+              color: inherit;
+              display: block;
+              font-size: 1.3rem;
+              padding: 5px;
+              transition: all 0.5s ease-in-out;
+              &:hover {
+                color: $hover-color;
+                transform: scale(1.2);
+              }
+              &:active {
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#name {
+  color: $color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10rem 0rem 0rem;
+  padding: 2rem 0rem;
+  #name-into {
+    font-size: 1.5rem;
+    padding: 1.5rem 0rem;
+    line-height: 1rem;
+    word-spacing: 0.15rem;
+    white-space: pre-wrap;
+  }
+  #full-name {
+    font-size: 4rem;
+    padding: 1.5rem 0rem;
+    @include animatingName;
+  }
+  #name-description {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    word-spacing: 0.3rem;
+    white-space: pre-wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  img {
+    width: 80px;
+  }
+  .navbar-links {
+    display: none !important;
+  }
+  .secondary-navbar {
+    display: block !important;
+  }
+  #name {
+    margin: 5rem 0rem;
+    #name-into {
+      font-size: 1.3rem;
+      padding: 1rem 0rem;
+    }
+    #full-name {
+      font-size: 3rem;
+    }
+    #name-description {
+      font-size: 1rem;
+    }
+  }
+}
+
+#hamburger-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  #hamburger {
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+    &::after,
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 40px;
+      height: 4px;
+      background-color: white;
+      border-radius: 3px;
+      transition: all 0.5s ease-in-out;
+    }
+    &::before {
+      transform: translateY(-10px);
+    }
+    &::after {
+      transform: translateY(10px);
+    }
+  }
+}
+#hamburger-button.open #hamburger {
+  transform: translateX(-20px);
+  background-color: transparent;
+}
+#hamburger-button.open #hamburger::before {
+  transform: rotate(45deg) translate(10px, -10px);
+}
+#hamburger-button.open #hamburger::after {
+  transform: rotate(-45deg) translate(10px, 10px);
+}

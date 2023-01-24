@@ -4,30 +4,26 @@ import projectData from "./projectsData";
 //importing the project data
 import projectsData from "./projectsData";
 
-//importing the css
-import "./css/projects.css";
-
 export const Projects = () => {
   return (
-    <section id="project-area">
+    <div id="projects-area-start" className="reveal">
       <h1 id="project-area-title">Projects</h1>
       <Project></Project>
-      <hr></hr>
-    </section>
+    </div>
   );
 };
 
 const Project = () => {
   return (
-    <section id="projects">
+    <section id="projects" className="reveal">
       {projectData.map(
         ({ image, heading, description, giticon, liveicon, live, link }) => {
           return (
-            <section id="project">
+            <section id="project" className="reveal">
               <img src={image}></img>
               <h2>{heading}</h2>
               <p>{description}</p>
-              <section>
+              <section id="project-buttons">
                 <a target="_blank" href={live}>
                   {liveicon}
                 </a>

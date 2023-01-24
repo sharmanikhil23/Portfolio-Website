@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./components/animation.js/index";
 
 /**
  * Importing all the Css
  */
-import "./css/index.css";
-
+import "./components/styles/css/index.css";
 /**
  * importing Other components
  */
