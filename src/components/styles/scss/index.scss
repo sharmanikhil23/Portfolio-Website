@@ -6,6 +6,7 @@
 @import "./footer";
 @import "./animate";
 @import "./_star";
+
 *,
 ::after,
 ::before {
@@ -23,7 +24,7 @@ body {
   min-height: 100vh;
   #root {
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
   }
 }
 

@@ -9,6 +9,12 @@ import { Education } from "../education/education";
 import $ from "jquery";
 const Completed = () => {
   const [playAnimation, setPlayAnimation] = useState(false);
+  useEffect(() => {
+    setPlayAnimation(true);
+    setTimeout(() => {
+      setPlayAnimation(false);
+    }, 1500);
+  }, []);
 
   return playAnimation === true ? <Loading></Loading> : <Data></Data>;
 };
