@@ -5,8 +5,19 @@ import project0 from "./images/project0.png";
 import project1 from "./images/project1.png";
 import project2 from "./images/project2.png";
 import project3 from "./images/project3.png";
+import weatherChrome from "./images/weather-chrome.png";
 
 const projectData = [
+  {
+    image: weatherChrome,
+    heading: "Weather Chrome Extension",
+    description:
+      "Developed a chrome extension to get the weather with 1 click in your browser",
+    giticon: <BsGithub></BsGithub>,
+    liveicon: <RiLiveFill></RiLiveFill>,
+    link: "https://github.com/sharmanikhil23/weather-chrome-extension",
+    live: "https://chrome.google.com/webstore/detail/weather-tracker/onjkdpaohoakdfepjkonohdjdiopncim",
+  },
   {
     image: project0,
     heading: " Sorting Algorithm Visualiser",
@@ -44,8 +55,8 @@ const projectData = [
       "A Custom build api used to fetch weather and also running live so you can try it. Instructions are avaliable on gitHub",
     giticon: <BsGithub></BsGithub>,
     liveicon: <RiLiveFill></RiLiveFill>,
-    live: "https://sharmanikhil-weather-app.herokuapp.com/",
-    link: "https://github.com/sharmanikhil23/weatherApp",
+    live: "https://gleaming-lion-wetsuit.cyclic.app/",
+    link: "https://github.com/sharmanikhil23/weather-api",
   },
 ];
 

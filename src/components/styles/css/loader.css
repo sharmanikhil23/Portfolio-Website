@@ -36,26 +36,7 @@
   border-radius: 100px;
   transform-origin: left;
   box-shadow: 0 0 30px 4px #7371fc;
-  -webkit-animation: animate 2s linear infinite;
-          animation: animate 2s linear infinite;
-}
-
-@-webkit-keyframes animate {
-  0%, 20% {
-    transform: scaleX(0);
-  }
-  40% {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-  40.00001%, 60% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-  80%, 100% {
-    transform: scaleX(0);
-    transform-origin: left;
-  }
+  animation: animate 2s linear infinite;
 }
 
 @keyframes animate {

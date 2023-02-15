@@ -19,7 +19,7 @@ const Project = () => {
       {projectData.map(
         ({ image, heading, description, giticon, liveicon, live, link }) => {
           return (
-            <section id="project" className="reveal">
+            <section id="project">
               <img src={image}></img>
               <h2>{heading}</h2>
               <p>{description}</p>
