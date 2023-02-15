@@ -379,11 +379,11 @@
   border-width: 2px solid black;
   border-radius: 5px;
   margin: 1rem;
-  background-color: #141414;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 #projects-area-start #projects #project img {
   width: 100%;
-  height: auto;
+  height: 300px;
   border-radius: 5px;
 }
 #projects-area-start #projects #project h2 {
@@ -476,7 +476,7 @@
   z-index: 5;
   display: block;
   padding: 0.7rem 2rem;
-  background-color: #141414;
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   margin: 0.5rem 1rem;
   text-decoration: none;
