@@ -13,7 +13,7 @@ const social = [
   },
   {
     id: 2,
-    link: "https://www.linkedin.com/in/nikhil-sharma-958a861b2/",
+    link: "https://www.linkedin.com/in/-nikhilsharma/",
     name: "LinkedIn",
     icon: <BsLinkedin></BsLinkedin>,
   },
