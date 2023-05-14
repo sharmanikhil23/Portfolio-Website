@@ -21,10 +21,10 @@
 
 body {
   background: $background-first;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   #root {
-    width: 99vw;
+    width: 100%;
     min-height: 100vh;
   }
 }

@@ -11,25 +11,25 @@
 }
 @media (max-width: 1000px) {
   #main-page #main {
-    width: 85vw;
+    width: 85%;
     margin: auto;
   }
 }
 @media (max-width: 600px) {
   #main-page #main {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
 }
 @media (max-width: 400px) {
   #main-page #main {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
 }
 @media (min-width: 1000px) {
   #main-page #main {
-    width: 80vw;
+    width: 80%;
     margin: auto;
   }
 }
@@ -110,7 +110,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 10rem 0rem 0rem;
+  margin: 1rem 0rem 0rem;
   padding: 2rem 0rem;
 }
 #name #name-into {
@@ -227,11 +227,11 @@
 
 #education-area {
   background-color: black;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 }
 #education-area #education {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   color: #fff;
   display: flex;
@@ -241,49 +241,49 @@
 }
 @media (max-width: 1000px) {
   #education-area #education {
-    width: 85vw;
+    width: 85%;
     margin: auto;
   }
 }
 @media (max-width: 600px) {
   #education-area #education {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
 }
 @media (max-width: 400px) {
   #education-area #education {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
 }
 @media (min-width: 1000px) {
   #education-area #education {
-    width: 80vw;
+    width: 80%;
     margin: auto;
   }
 }
 @media (max-width: 1000px) {
   #education-area #education #education-complete-area {
-    width: 85vw;
+    width: 85%;
     margin: auto;
   }
 }
 @media (max-width: 600px) {
   #education-area #education #education-complete-area {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
 }
 @media (max-width: 400px) {
   #education-area #education #education-complete-area {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
 }
 @media (min-width: 1000px) {
   #education-area #education #education-complete-area {
-    width: 80vw;
+    width: 80%;
     margin: auto;
   }
 }
@@ -342,25 +342,25 @@
 }
 @media (max-width: 1000px) {
   #projects-area-start {
-    width: 85vw;
+    width: 85%;
     margin: auto;
   }
 }
 @media (max-width: 600px) {
   #projects-area-start {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
 }
 @media (max-width: 400px) {
   #projects-area-start {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
 }
 @media (min-width: 1000px) {
   #projects-area-start {
-    width: 80vw;
+    width: 80%;
     margin: auto;
   }
 }
@@ -434,25 +434,25 @@
 }
 @media (max-width: 1000px) {
   #footer-area-start {
-    width: 85vw;
+    width: 85%;
     margin: auto;
   }
 }
 @media (max-width: 600px) {
   #footer-area-start {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
 }
 @media (max-width: 400px) {
   #footer-area-start {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
 }
 @media (min-width: 1000px) {
   #footer-area-start {
-    width: 80vw;
+    width: 80%;
     margin: auto;
   }
 }
@@ -510,7 +510,7 @@
 }
 
 #bg-animation-start {
-  width: 100vw;
+  width: 100%;
 }
 
 .bg-animation {
@@ -615,11 +615,11 @@
 
 body {
   background: radial-gradient(circle at 13% 17%, #202022 0, #000 100%);
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 }
 body #root {
-  width: 99vw;
+  width: 100%;
   min-height: 100vh;
 }
 

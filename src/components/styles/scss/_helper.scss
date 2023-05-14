@@ -1,19 +1,19 @@
 @mixin visualWidth {
   @media (max-width: 1000px) {
-    width: 85vw;
+    width: 85%;
     margin: auto;
   }
 
   @media (max-width: 600px) {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
   @media (max-width: 400px) {
-    width: 92vw;
+    width: 92%;
     margin: auto;
   }
   @media (min-width: 1000px) {
-    width: 80vw;
+    width: 80%;
     margin: auto;
   }
 }
