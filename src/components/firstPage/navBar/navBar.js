@@ -9,9 +9,11 @@ import { links } from "./navBarLinks";
 export const NavBar = () => {
   return (
     <div className="navbar">
-      <NavBarLogo className="navbar-logo"></NavBarLogo>
-      <MainNavBar></MainNavBar>
-      <SecondayNavBar></SecondayNavBar>
+      <div>
+        <NavBarLogo className="navbar-logo"></NavBarLogo>
+        <MainNavBar></MainNavBar>
+        <SecondayNavBar></SecondayNavBar>
+      </div>
     </div>
   );
 };

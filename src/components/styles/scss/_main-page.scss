@@ -11,58 +11,62 @@
     @include visualWidth;
     display: flex;
     flex-direction: column;
-
+    position: relative;
     .navbar {
-      padding: 0.5rem 0rem;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      img {
-        width: 100px;
-      }
-      .navbar-links {
+      position: absolute;
+      width: 100%;
+      div {
+        padding: 0.5rem 0rem;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
-        @include navElements;
-      }
-      .secondary-navbar {
-        display: none;
-        .secondary-navbar-links {
-          color: $color;
-          background-color: black;
-          position: absolute;
-          right: 1rem;
-          min-width: 210px;
-          padding: 2rem;
-          display: none;
-          flex-direction: column;
-          justify-content: center;
+        justify-content: space-between;
+        img {
+          width: 100px;
+        }
+        .navbar-links {
+          display: flex;
+          flex-direction: row;
           align-items: center;
-          top: 7rem;
-          box-shadow: 0px 8px 16px 0px rgba(241, 236, 236, 0.2);
-          border-radius: 10px;
-          z-index: 2;
-          h3 {
-            line-height: 1rem;
-            padding: 5px;
-            font-weight: 400;
-            cursor: pointer;
-            a {
-              text-decoration: none;
-              color: inherit;
-              display: block;
-              font-size: 1.3rem;
+          justify-content: center;
+          @include navElements;
+        }
+        .secondary-navbar {
+          display: none;
+          .secondary-navbar-links {
+            color: $color;
+            background-color: black;
+            position: absolute;
+            right: 1rem;
+            min-width: 210px;
+            padding: 2rem;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 7rem;
+            box-shadow: 0px 8px 16px 0px rgba(241, 236, 236, 0.2);
+            border-radius: 10px;
+            z-index: 2;
+            h3 {
+              line-height: 1rem;
               padding: 5px;
-              transition: all 0.5s ease-in-out;
-              &:hover {
-                color: $hover-color;
-                transform: scale(1.2);
-              }
-              &:active {
-                background-color: transparent;
+              font-weight: 400;
+              cursor: pointer;
+              a {
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                font-size: 1.3rem;
+                padding: 5px;
+                transition: all 0.5s ease-in-out;
+                &:hover {
+                  color: $hover-color;
+                  transform: scale(1.2);
+                }
+                &:active {
+                  background-color: transparent;
+                }
               }
             }
           }
@@ -72,30 +76,37 @@
   }
 }
 #name {
-  color: $color;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 1rem 0rem 0rem;
-  padding: 2rem 0rem;
-  #name-into {
-    font-size: 1.5rem;
-    padding: 1.5rem 0rem;
-    line-height: 1rem;
-    word-spacing: 0.15rem;
-    white-space: pre-wrap;
-  }
-  #full-name {
-    font-size: 4rem;
-    padding: 1.5rem 0rem;
-    @include animatingName;
-  }
-  #name-description {
-    display: block;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    word-spacing: 0.3rem;
-    white-space: pre-wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  div {
+    color: $color;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem 0rem 0rem;
+    padding: 2rem 0rem;
+    #name-into {
+      font-size: 1.5rem;
+      padding: 1.5rem 0rem;
+      line-height: 1rem;
+      word-spacing: 0.15rem;
+      white-space: pre-wrap;
+    }
+    #full-name {
+      font-size: 4rem;
+      padding: 1.5rem 0rem;
+      @include animatingName;
+    }
+    #name-description {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      word-spacing: 0.3rem;
+      white-space: pre-wrap;
+    }
   }
 }
 

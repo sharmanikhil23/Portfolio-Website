@@ -6,13 +6,11 @@ export const Education = () => {
     <section id="education-area">
       <div id="education" className="reveal">
         <div id="education-complete-area">
-          <h1 id="education-heading" className="reveal">
-            Education
-          </h1>
+          <h1 id="education-heading">Education</h1>
           {EducationalData.map((value, index) => {
             const { title, period, institution, description } = value;
             return (
-              <div key={index} id="educations" className="reveal">
+              <div key={index} id="educations">
                 <div id="education-school">
                   <h1>{title}</h1>
                   <p>{period}</p>

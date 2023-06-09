@@ -3,9 +3,11 @@ import React from "react";
 export const Name = () => {
   return (
     <section id="name">
-      <p id="name-into">Hey, I'm</p>
-      <h1 id="full-name">Nikhil Sharma</h1>
-      <Description></Description>
+      <div>
+        <p id="name-into">Hey, I'm</p>
+        <h1 id="full-name">Nikhil Sharma</h1>
+        <Description></Description>
+      </div>
     </section>
   );
 };
