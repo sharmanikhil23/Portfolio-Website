@@ -486,6 +486,16 @@
   color: #177ddc;
   transform: scale(1.3);
 }
+#projects-area-start .single-project {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 1rem 0rem 0rem !important;
+}
+#projects-area-start .single-project #project {
+  max-width: 400px;
+}
 
 @media screen and (max-width: 1400px) {
   #project img {

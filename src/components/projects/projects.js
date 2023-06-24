@@ -59,29 +59,51 @@ const ProjectTypes = ({ filterProjects }) => {
 };
 
 const Project = ({ current }) => {
-  return (
-    <section id="projects">
-      {current.map(
-        ({ image, heading, description, giticon, liveicon, live, link }) => {
-          return (
-            <section id="project">
-              <img src={image}></img>
-              <h2>{heading}</h2>
-              <Description description={description}></Description>
-              <section id="project-buttons">
-                <a target="_blank" href={live}>
-                  {liveicon}
-                </a>
-                <a target="_blank" href={link}>
-                  {giticon}
-                </a>
+  if (current.length == 1) {
+    const { image, heading, description, giticon, liveicon, live, link } =
+      current[0];
+    return (
+      <section id="projects" className="single-project">
+        <section id="project">
+          <img src={image}></img>
+          <h2>{heading}</h2>
+          <Description description={description}></Description>
+          <section id="project-buttons">
+            <a target="_blank" href={live}>
+              {liveicon}
+            </a>
+            <a target="_blank" href={link}>
+              {giticon}
+            </a>
+          </section>
+        </section>
+      </section>
+    );
+  } else {
+    return (
+      <section id="projects">
+        {current.map(
+          ({ image, heading, description, giticon, liveicon, live, link }) => {
+            return (
+              <section id="project">
+                <img src={image}></img>
+                <h2>{heading}</h2>
+                <Description description={description}></Description>
+                <section id="project-buttons">
+                  <a target="_blank" href={live}>
+                    {liveicon}
+                  </a>
+                  <a target="_blank" href={link}>
+                    {giticon}
+                  </a>
+                </section>
               </section>
-            </section>
-          );
-        }
-      )}
-    </section>
-  );
+            );
+          }
+        )}
+      </section>
+    );
+  }
 };
 
 const Description = ({ description }) => {
