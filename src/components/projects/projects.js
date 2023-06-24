@@ -5,13 +5,28 @@ import projectData from "./projectsData";
 import projectsData from "./projectsData";
 import catergories from "./projectCategories";
 
+let hambuger = document.querySelector(".hamburger");
+let hambugerOpen = false;
+hambuger.addEventListener("click", function () {
+  if (!hambugerOpen) {
+    hambuger.classList.add("hamburgerOpen");
+    hambugerOpen = true;
+    document.getElementById("projectCategoryAreaSecondary").style.display =
+      "block";
+  } else {
+    hambuger.classList.remove("hamburgerOpen");
+    hambugerOpen = false;
+    document.getElementById("projectCategoryAreaSecondary").style.display =
+      "none";
+  }
+});
+
 export const Projects = () => {
   const allProjects = projectData;
   const [current, setCurrent] = useState(allProjects);
 
   const filterProjects = (e, type) => {
     e.preventDefault();
-    console.log(type);
     if (type.toLowerCase() == "all") {
       setCurrent(allProjects);
       return;
@@ -32,11 +47,26 @@ export const Projects = () => {
   };
 
   return (
-    <div id="projects-area-start" className="reveal">
-      <h1 id="project-area-title">Projects</h1>
-      <ProjectTypes filterProjects={filterProjects}></ProjectTypes>
-      <Project current={current}></Project>
-    </div>
+    <>
+      <div id="projects-area-start" className="reveal secondary">
+        <div id="secondary-project-title">
+          <h1 id="project-area-title">Projects</h1>
+          <div class="hamburger">
+            <div class="hamburgerBtn"></div>
+            <ProjectTypesSecondary
+              filterProjects={filterProjects}
+            ></ProjectTypesSecondary>
+          </div>
+        </div>
+        <Project current={current}></Project>
+      </div>
+
+      <div id="projects-area-start" className="reveal primary">
+        <h1 id="project-area-title">Projects</h1>
+        <ProjectTypes filterProjects={filterProjects}></ProjectTypes>
+        <Project current={current}></Project>
+      </div>
+    </>
   );
 };
 
@@ -58,28 +88,25 @@ const ProjectTypes = ({ filterProjects }) => {
   );
 };
 
+const ProjectTypesSecondary = ({ filterProjects }) => {
+  return (
+    <div id="projectCategoryAreaSecondary">
+      {catergories.map((data, index) => {
+        return (
+          <div
+            key={index}
+            className="projectCategoriesSecondary"
+            onClick={(e) => filterProjects(e, data)}
+          >
+            {data}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 const Project = ({ current }) => {
-  // if (current.length == 1) {
-  //   const { image, heading, description, giticon, liveicon, live, link } =
-  //     current[0];
-  //   return (
-  //     <section id="projects" className="single-project">
-  //       <section id="project">
-  //         <img src={image}></img>
-  //         <h2>{heading}</h2>
-  //         <Description description={description}></Description>
-  //         <section id="project-buttons">
-  //           <a target="_blank" href={live}>
-  //             {liveicon}
-  //           </a>
-  //           <a target="_blank" href={link}>
-  //             {giticon}
-  //           </a>
-  //         </section>
-  //       </section>
-  //     </section>
-  //   );
-  // } else {
   {
     return (
       <section
