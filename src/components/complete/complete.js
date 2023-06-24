@@ -13,7 +13,7 @@ const Completed = () => {
     setPlayAnimation(true);
     setTimeout(() => {
       setPlayAnimation(false);
-    }, 1500);
+    }, 1000);
   }, []);
 
   return playAnimation === true ? <Loading></Loading> : <Data></Data>;

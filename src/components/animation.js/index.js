@@ -4,7 +4,7 @@ window.addEventListener("scroll", () => {
   for (let i = 0; i < data.length; i++) {
     let windowHeight = window.innerHeight;
     let revealTop = data[i].getBoundingClientRect().top;
-    let revealPoint = 10;
+    let revealPoint = 100;
     if (revealTop < windowHeight - revealPoint) {
       data[i].classList.add("active");
     } else {

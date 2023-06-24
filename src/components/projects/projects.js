@@ -1,28 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import projectData from "./projectsData";
 
 //importing the project data
 import projectsData from "./projectsData";
+import catergories from "./projectCategories";
 
 export const Projects = () => {
+  const allProjects = projectData;
+  const [current, setCurrent] = useState(allProjects);
+
+  const filterProjects = (e, type) => {
+    e.preventDefault();
+    console.log(type);
+    if (type.toLowerCase() == "all") {
+      setCurrent(allProjects);
+      return;
+    }
+    let result = allProjects.filter((data) => {
+      let { category } = data;
+      category = category.toLowerCase();
+      type = type.toLowerCase();
+      category = category.replace(/\s/g, "");
+      type = type.replace(/\s/g, "");
+
+      if (type === category) {
+        return data;
+      }
+    });
+
+    setCurrent(result);
+  };
+
   return (
     <div id="projects-area-start" className="reveal">
       <h1 id="project-area-title">Projects</h1>
-      <Project></Project>
+      <ProjectTypes filterProjects={filterProjects}></ProjectTypes>
+      <Project current={current}></Project>
     </div>
   );
 };
 
-const Project = () => {
+const ProjectTypes = ({ filterProjects }) => {
   return (
-    <section id="projects" className="reveal">
-      {projectData.map(
+    <div id="projectCategoryArea">
+      {catergories.map((data, index) => {
+        return (
+          <div
+            key={index}
+            className="projectCategories"
+            onClick={(e) => filterProjects(e, data)}
+          >
+            {data}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+const Project = ({ current }) => {
+  return (
+    <section id="projects">
+      {current.map(
         ({ image, heading, description, giticon, liveicon, live, link }) => {
           return (
             <section id="project">
               <img src={image}></img>
               <h2>{heading}</h2>
-              <p>{description}</p>
+              <Description description={description}></Description>
               <section id="project-buttons">
                 <a target="_blank" href={live}>
                   {liveicon}
@@ -36,5 +81,59 @@ const Project = () => {
         }
       )}
     </section>
+  );
+};
+
+const Description = ({ description }) => {
+  const [readMore, setReadMore] = useState(false);
+
+  return (
+    <>
+      <p>
+        {description.length < 200 ? (
+          description
+        ) : readMore == false ? (
+          <MoreButton
+            description={description}
+            readMore={readMore}
+            setReadMore={setReadMore}
+          />
+        ) : (
+          <LessButton
+            description={description}
+            readMore={readMore}
+            setReadMore={setReadMore}
+          ></LessButton>
+        )}
+      </p>
+    </>
+  );
+};
+
+const MoreButton = ({ description, readMore, setReadMore }) => {
+  return (
+    <>
+      {description.substring(0, 200)}...
+      <button
+        onClick={() => setReadMore(!readMore)}
+        className="projectDescriptionbutton"
+      >
+        "Show More"
+      </button>
+    </>
+  );
+};
+
+const LessButton = ({ description, readMore, setReadMore }) => {
+  return (
+    <>
+      {description}
+      <button
+        onClick={() => setReadMore(!readMore)}
+        className="projectDescriptionbutton"
+      >
+        "Show Less"
+      </button>
+    </>
   );
 };
