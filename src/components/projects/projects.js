@@ -4,10 +4,10 @@ import projectData from "./projectsData";
 //importing the project data
 import projectsData from "./projectsData";
 import catergories from "./projectCategories";
-
-let hambuger = document.querySelector(".hamburger");
 let hambugerOpen = false;
-hambuger.addEventListener("click", function () {
+const secondaryProjectTypeListButton = () => {
+  let hambuger = document.querySelector(".hamburger");
+
   if (!hambugerOpen) {
     hambuger.classList.add("hamburgerOpen");
     hambugerOpen = true;
@@ -19,7 +19,7 @@ hambuger.addEventListener("click", function () {
     document.getElementById("projectCategoryAreaSecondary").style.display =
       "none";
   }
-});
+};
 
 export const Projects = () => {
   const allProjects = projectData;
@@ -49,7 +49,10 @@ export const Projects = () => {
   return (
     <>
       <div id="projects-area-start" className="reveal secondary">
-        <div id="secondary-project-title">
+        <div
+          id="secondary-project-title"
+          onClick={() => secondaryProjectTypeListButton()}
+        >
           <h1 id="project-area-title">Projects</h1>
           <div class="hamburger">
             <div class="hamburgerBtn"></div>
