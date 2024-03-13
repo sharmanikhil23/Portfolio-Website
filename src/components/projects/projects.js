@@ -47,7 +47,7 @@ export const Projects = () => {
   };
 
   return (
-    <>
+    <div id="projects">
       <div id="projects-area-start" className="reveal secondary">
         <div
           id="secondary-project-title"
@@ -69,7 +69,7 @@ export const Projects = () => {
         <ProjectTypes filterProjects={filterProjects}></ProjectTypes>
         <Project current={current}></Project>
       </div>
-    </>
+    </div>
   );
 };
 

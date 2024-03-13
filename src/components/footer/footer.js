@@ -25,6 +25,23 @@ export const Footer = () => {
 const Socials = () => {
   return (
     <>
+      <div
+        class="badge-base LI-profile-badge"
+        data-locale="en_US"
+        data-size="medium"
+        data-theme="dark"
+        data-type="VERTICAL"
+        data-vanity="-nikhilsharma"
+        data-version="v1"
+      >
+        <a
+          class="badge-base__link LI-simple-link"
+          href="https://ca.linkedin.com/in/-nikhilsharma?trk=profile-badge"
+        >
+          Nikhil Sharma
+        </a>
+      </div>
+
       {socialsData.map((data) => {
         let { id, link, name, icon } = data;
 
