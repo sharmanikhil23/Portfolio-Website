@@ -39,7 +39,6 @@
     background-color: hsl(240, 1%, 17%);
     opacity: 1;
     width: 100%;
-    position: fixed;
     bottom: 0;
   }
   #navBar div {
