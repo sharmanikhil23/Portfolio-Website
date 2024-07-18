@@ -1,0 +1,59 @@
+/* gradient */
+/* solid */
+:export {
+  vergasgold: hsl(45, 54%, 58%);
+}
+
+#navBar {
+  width: 100%;
+}
+#navBar div {
+  position: absolute;
+  background-color: hsl(240, 1%, 17%);
+  z-index: 1;
+  border: 1px solid hsl(0, 0%, 22%);
+  display: flex;
+  flex-direction: row;
+  right: 0;
+  padding: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+#navBar div p {
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 98%);
+  margin: 0rem 1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+#navBar div p:hover {
+  color: hsla(0, 0%, 84%, 0.7);
+}
+
+.navBar-item-selected {
+  color: hsl(45, 100%, 72%) !important;
+}
+
+@media (max-width: 768px) {
+  #navBar {
+    background-color: hsl(240, 1%, 17%);
+    opacity: 1;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  #navBar div {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid hsl(0, 0%, 22%);
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=navBar.css.map */

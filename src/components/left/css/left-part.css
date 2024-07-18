@@ -1,0 +1,307 @@
+/* gradient */
+/* solid */
+:export {
+  vergasgold: hsl(45, 54%, 58%);
+}
+
+@media (min-width: 1024px) {
+  #left-part {
+    position: relative;
+    background-color: hsl(240, 2%, 12%);
+    position: sticky;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    height: 100%;
+    margin-bottom: 0px;
+    border: 1px solid hsl(0, 0%, 22%);
+    border-radius: 1rem;
+  }
+  #left-part #left-part-data {
+    width: 100%;
+    position: relative;
+    padding: 2rem 1rem;
+  }
+  #left-part #left-part-data #name-title-section-combined,
+  #left-part #left-part-data #showContactButton {
+    display: none;
+  }
+  #left-part #left-part-data #nameAndlogo {
+    width: 100%;
+    margin: 0rem 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #left-part #left-part-data #nameAndlogo #logo-section-start {
+    border-radius: 30px;
+    background-color: #383839;
+  }
+  #left-part #left-part-data #nameAndlogo #logo-section-start img {
+    display: block;
+    align-items: center;
+    width: 9rem;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  #left-part #left-part-data #nameAndlogo #name-section-start {
+    padding: 1rem 0rem;
+  }
+  #left-part #left-part-data #nameAndlogo #name-section-start h1 {
+    font-size: 1.5rem;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 3px 12px;
+    border-radius: 8px;
+  }
+  #left-part #left-part-data #nameAndlogo #title-section-start {
+    padding: 1rem 0rem;
+    background-color: #2b2b2c;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+  }
+  #left-part #left-part-data #nameAndlogo #title-section-start p {
+    font-size: 0.8rem;
+  }
+  #left-part #left-part-data #socials div {
+    border-top: 1.5px solid hsl(0, 0%, 22%);
+    padding-top: 1rem;
+  }
+  #left-part #left-part-data #socials div .social-card-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.5rem 0rem;
+    gap: 16px;
+  }
+  #left-part #left-part-data #socials div .social-card-start .social-card-icon-area {
+    position: relative;
+    background: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    z-index: 1;
+    padding: 0.5rem;
+    color: hsl(45, 100%, 72%);
+  }
+  #left-part #left-part-data #socials div .social-card-start .social-card-icon-area::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: hsl(240, 2%, 13%);
+    inset: 1px;
+    border-radius: inherit;
+  }
+  #left-part #left-part-data #socials div .social-card-start .social-card-text-area {
+    line-height: 1rem;
+  }
+  #left-part #left-part-data #socials div .social-card-start .social-card-text-area .title {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: hsla(0, 0%, 84%, 0.7);
+  }
+  #left-part #left-part-data #socials div .social-card-start .social-card-text-area .value {
+    text-transform: lowercase;
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 98%);
+  }
+}
+@media (max-width: 1024px) {
+  #left-part {
+    display: block;
+    position: relative;
+    width: 100%;
+    background-color: hsl(240, 2%, 12%);
+    max-height: -moz-max-content;
+    max-height: max-content;
+    height: 100%;
+    margin-bottom: 1rem;
+    z-index: 1;
+    border: 1px solid hsl(0, 0%, 22%);
+    border-radius: 1rem;
+  }
+  #left-part #left-part-data {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  #left-part #left-part-data #nameAndlogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+  #left-part #left-part-data #nameAndlogo #showContactButton {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 15px;
+    font-size: 0.8rem;
+    color: hsl(45, 100%, 72%);
+    background: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+    padding: 0.8rem;
+    box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+  }
+  #left-part #left-part-data #nameAndlogo #showContactButton::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+    transition: 0.25s ease;
+    z-index: -1;
+  }
+  #left-part #left-part-data #nameAndlogo #showContactButton:hover,
+  #left-part #left-part-data #nameAndlogo #showContactButton :focus {
+    background: linear-gradient(to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50%);
+  }
+  #left-part #left-part-data #nameAndlogo #showContactButton:hover::before,
+  #left-part #left-part-data #nameAndlogo #showContactButton :focus::before {
+    background: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
+  }
+  #left-part #left-part-data #nameAndlogo #showContactButton #show-contacts-down-arrow {
+    display: none;
+  }
+  #left-part #left-part-data #nameAndlogo #logo-section-start {
+    border-radius: 30px;
+    background-color: #383839;
+  }
+  #left-part #left-part-data #nameAndlogo #logo-section-start img {
+    display: block;
+    align-items: center;
+    width: 7rem;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  #left-part #left-part-data #nameAndlogo > #name-section-start {
+    display: none;
+  }
+  #left-part #left-part-data #nameAndlogo > #title-section-start {
+    display: none;
+  }
+  #left-part #left-part-data #nameAndlogo #name-title-section-combined {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #left-part #left-part-data #nameAndlogo #name-title-section-combined #name-section-start {
+    padding: 0.5rem 0rem;
+  }
+  #left-part #left-part-data #nameAndlogo #name-title-section-combined #name-section-start h1 {
+    font-size: 1.5rem;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 3px 0px;
+    border-radius: 8px;
+  }
+  #left-part #left-part-data #nameAndlogo #name-title-section-combined #title-section-start {
+    padding: 1rem 0rem;
+    background-color: #2b2b2c;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+  }
+  #left-part #left-part-data #nameAndlogo #name-title-section-combined #title-section-start p {
+    font-size: 0.8rem;
+  }
+  #left-part #left-part-data #socials {
+    display: none;
+  }
+  #left-part #left-part-data #socials div {
+    position: relative;
+    margin: 1rem;
+    border-top: 1.5px solid hsl(0, 0%, 22%);
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  #left-part #left-part-data #socials div .social-card-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0rem;
+    gap: 16px;
+    height: auto;
+  }
+  #left-part #left-part-data #socials div .social-card-start .social-card-icon-area {
+    position: relative;
+    background: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    z-index: 1;
+    padding: 0.5rem;
+    color: hsl(45, 100%, 72%);
+  }
+  #left-part #left-part-data #socials div .social-card-start .social-card-icon-area::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: hsl(240, 2%, 13%);
+    inset: 1px;
+    border-radius: inherit;
+  }
+  #left-part #left-part-data #socials div .social-card-start .social-card-text-area {
+    max-height: auto;
+    line-height: 1.3rem;
+  }
+  #left-part #left-part-data #socials div .social-card-start .social-card-text-area .title {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: hsla(0, 0%, 84%, 0.7);
+  }
+  #left-part #left-part-data #socials div .social-card-start .social-card-text-area .value {
+    text-transform: lowercase;
+    font-size: 0.9rem;
+    color: hsl(0, 0%, 98%);
+  }
+}
+@media (max-width: 768px) {
+  #socials div {
+    display: block !important;
+  }
+  #left-part-data #nameAndlogo #showContactButton {
+    font-size: 1.5rem !important;
+    padding: 0.3rem;
+  }
+  #left-part-data #nameAndlogo #showContactButton p {
+    display: none !important;
+  }
+  #left-part-data #nameAndlogo #showContactButton #show-contacts-down-arrow {
+    display: block !important;
+  }
+}
+.show-contacts {
+  display: block !important;
+  animation: fade 1s ease backwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=left-part.css.map */

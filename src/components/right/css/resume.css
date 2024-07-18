@@ -1,0 +1,20 @@
+/* gradient */
+/* solid */
+:export {
+  vergasgold: hsl(45, 54%, 58%);
+}
+
+#resumeArea {
+  margin: 0.5rem 0rem;
+  height: 20rem;
+  background-color: transparent;
+}
+#resumeArea iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.5s ease-in-out;
+}/*# sourceMappingURL=resume.css.map */

@@ -1,0 +1,190 @@
+@import "../../scss/color.scss";
+
+#projects-area-start {
+  width: 100%;
+
+  #projects-area-nav-tabs {
+    margin: 1rem 0rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    p {
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all $transition-1;
+      &:hover {
+        color: $light-gray-70;
+      }
+    }
+  }
+
+  #projects-area-nav-tabs-2 {
+    margin: 1rem 0rem 1.5rem;
+    position: relative;
+    display: none;
+    width: 100%;
+    #project-area-nav-bar-toggle-button-area {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      background-color: $eerie-black-2;
+      color: $light-gray;
+      outline: none;
+      border: 1px solid $jet;
+      padding: 0.5rem 0.7rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      button {
+        font-weight: 100 !important;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        display: inline-block;
+      }
+    }
+    .dropdown-menu {
+      opacity: 0;
+      margin-top: 0.3rem;
+      display: block;
+      position: absolute;
+      z-index: -5;
+      background-color: inherit;
+      background-color: $eerie-black-2;
+      color: $light-gray;
+      width: 100%;
+      border: 1px solid $jet;
+      border-radius: 1rem;
+      padding: 1rem;
+      p {
+        cursor: pointer;
+        padding: 0.5rem 0.7rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all $transition-1;
+        &:hover {
+          color: $light-gray-70;
+        }
+      }
+    }
+    .show {
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+
+  #projects {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 2rem 2rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    .project-data-start {
+      transition: scale $transition-1;
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      cursor: pointer;
+      &:hover .project-data-image-area {
+        transform: scale(1.05);
+        background-color: $light-gray-70;
+      }
+      &:hover .project-data-image-area .project-data-image-eye-area {
+        display: flex;
+      }
+      .project-data-image-area {
+        transition: transform $transition-1;
+        position: relative;
+        width: 100%;
+        border-radius: 1rem;
+        .project-data-image-eye-area {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: none;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          opacity: 0.9;
+          background-color: $eerie-black-2;
+          z-index: 2;
+          .project-data-image-eye {
+            padding: 0.5rem;
+            border-radius: 1rem;
+            color: $orange-yellow-crayola;
+            background-color: $smoky-black;
+            font-size: 3rem;
+          }
+        }
+
+        img {
+          border-radius: 1rem;
+          width: inherit;
+          object-fit: cover;
+          object-position: center;
+          height: 10rem;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          z-index: 1;
+          transition: $transition-1;
+        }
+      }
+      .project-data-description-area {
+        margin-top: 1rem;
+        h3 {
+          font-size: 1rem;
+          font-weight: 100;
+          color: $white-2;
+        }
+        p {
+          color: $light-gray-70;
+          font-size: 0.8rem;
+          margin: 0.4rem 0rem;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+.project-area-nav-tab-item-selected {
+  color: $orange-yellow-crayola;
+}
+
+@media (max-width: 1024px) {
+  #projects {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #projects {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  #projects-area-nav-tabs {
+    display: none !important;
+  }
+  #projects-area-nav-tabs-2 {
+    display: block !important;
+  }
+}

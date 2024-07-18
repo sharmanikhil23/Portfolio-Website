@@ -1,0 +1,97 @@
+/* gradient */
+/* solid */
+:export {
+  vergasgold: hsl(45, 54%, 58%);
+}
+
+#selected-project-data {
+  z-index: 4;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#selected-project-data #selected-project-cross {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  font-size: 2rem;
+  transition: scale 0.25s ease;
+  color: hsl(45, 100%, 72%);
+}
+#selected-project-data #selected-project-cross:hover {
+  scale: 1.1;
+}
+#selected-project-data #selected-project {
+  z-index: 6;
+  opacity: 1;
+  display: block;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: hsl(0, 0%, 22%);
+  width: 30%;
+}
+#selected-project-data #selected-project #selected-project-img {
+  text-align: center;
+  padding: 0rem 2rem;
+}
+#selected-project-data #selected-project #selected-project-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 80%;
+  height: 12rem;
+}
+#selected-project-data #selected-project #selected-project-heading {
+  margin: 1rem 0rem;
+}
+#selected-project-data #selected-project #selected-project-heading h1 {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+#selected-project-data #selected-project #selected-project-desc {
+  margin: 1rem 0rem;
+}
+#selected-project-data #selected-project #selected-project-desc p {
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 84%);
+  line-height: 1.3rem;
+  text-align: justify;
+}
+#selected-project-data #selected-project #selected-project-actionButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#selected-project-data #selected-project #selected-project-actionButton a {
+  margin: 0rem 0.5rem;
+  font-size: 1.8rem;
+  color: hsl(45, 100%, 72%);
+  cursor: pointer;
+  transition: scale 0.25s ease;
+}
+#selected-project-data #selected-project #selected-project-actionButton a:hover {
+  scale: 1.1;
+}
+
+.whenProjectSelected {
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  #selected-project {
+    width: 55% !important;
+  }
+}
+@media (max-width: 768px) {
+  #selected-project {
+    width: 80% !important;
+  }
+}/*# sourceMappingURL=selectedProject.css.map */

@@ -1,0 +1,102 @@
+@import "../../scss/color.scss";
+#right-part-1 {
+  position: relative;
+  background-color: $card-background-color;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 0px;
+  z-index: 1;
+  border: 1px solid $card-border-color;
+  border-radius: 1rem;
+  #right-part-2 {
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    #right-area-heading {
+      font-size: 2rem;
+      &::after {
+        margin: 0.7rem 0rem;
+        border-radius: 1rem;
+        display: block;
+        width: 10%;
+        height: 5px;
+        content: " ";
+        background-color: $orange-yellow-crayola;
+      }
+    }
+    #right-area-about {
+      margin: 0.5rem 0rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: $light-gray-70;
+      text-align: justify;
+    }
+  }
+}
+
+#skill-section-start {
+  width: 100%;
+  #skill-section-skill-tabs-area {
+    width: 100%;
+    margin: 1rem 0rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    .skill-section-skill-tabs {
+      position: relative;
+      background: $border-gradient-onyx;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: $shadow-2;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+      height: 8rem;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 1px;
+        background: $bg-gradient-jet;
+        border-radius: inherit;
+        z-index: -1;
+      }
+      .skill-section-skill-tab-icon {
+        font-size: 2rem;
+        color: $orange-yellow-crayola;
+      }
+      .skill-section-skill-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        h3 {
+          width: 100%;
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: $white-2;
+        }
+        p {
+          width: 100%;
+          font-size: 0.9rem;
+          line-height: 1rem;
+          font-weight: 300;
+          color: $light-gray-70;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #right-part-1 {
+    position: unset;
+  }
+  #skill-section-skill-tabs-area {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}

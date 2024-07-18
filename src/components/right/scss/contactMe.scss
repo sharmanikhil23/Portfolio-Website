@@ -1,0 +1,21 @@
+@import "../../scss/color.scss";
+
+#contactMe-start {
+  margin: 0.5rem 0rem;
+  #contactMe-map-iframe-area {
+    width: 100%;
+    height: 20rem;
+    iframe {
+      display: block;
+      width: 100%;
+      height: 20rem;
+      margin: 1rem 0rem;
+      border: none;
+      border-radius: 0.8rem;
+      box-shadow: $shadow-2;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity $transition-1, visibility $transition-2;
+    }
+  }
+}

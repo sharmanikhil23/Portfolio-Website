@@ -1,0 +1,170 @@
+@import "../../scss/color.scss";
+
+#contactMeFormArea {
+  display: block;
+  position: relative;
+  margin: 1.4rem 0rem 0rem;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  #contactMeFormAreaHeadingArea {
+    margin: 1rem 0rem;
+    h1 {
+      font-size: 1.5rem;
+    }
+    #contactMeFormAreaStart {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}
+
+.contactMeFormAreaSections {
+  padding: 0.5rem 0rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 3rem;
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    input {
+      margin: 0rem 0rem 0.5rem;
+      word-spacing: 0.1rem;
+      font-weight: 400;
+      width: 100%;
+      border: none;
+      background-color: transparent;
+      font-size: 0.8rem;
+      padding: 0.7rem 1rem;
+      outline: none;
+      color: $light-gray-70;
+      border: 1px solid $light-gray-70;
+      border-radius: 0.5rem;
+
+      &:focus {
+        border-color: $orange-yellow-crayola;
+      }
+      &:not(:placeholder-shown) {
+        color: $white-2;
+      }
+    }
+  }
+}
+#contactMeFormArea-secondSection {
+  width: 100%;
+  textarea {
+    width: 100%;
+    height: 5rem;
+    resize: vertical;
+    text-align: justify;
+    margin: 0rem 0rem 0.5rem;
+    word-spacing: 0.1rem;
+    font-weight: 400;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 0.8rem;
+    padding: 0.7rem 1rem;
+    outline: none;
+    color: $light-gray-70;
+    border: 1px solid $light-gray-70;
+    border-radius: 0.5rem;
+    &:focus {
+      border-color: $orange-yellow-crayola;
+    }
+    &:not(:placeholder-shown) {
+      color: $white-2;
+    }
+  }
+}
+
+#contactMeFormArea-thirdSection {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  #contactMeFormArea-thirdSection-submit-button-area {
+    display: block;
+    position: relative;
+    width: 30%;
+    cursor: pointer;
+    color: $orange-yellow-crayola;
+    padding: 0.7rem 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $shadow-3;
+    transition: $transition-1;
+    background: $border-gradient-onyx;
+    transform: scale $transition-2;
+    outline: none;
+    border: none;
+    &:active {
+      scale: 0.9 0.9;
+    }
+    p {
+      cursor: pointer;
+      text-transform: capitalize;
+      color: $orange-yellow-crayola;
+
+      text-align: center;
+      background-color: transparent;
+      font-size: 0.8rem;
+      padding: 0rem 0rem 0rem 1rem;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 1px;
+        background: $bg-gradient-jet;
+        border-radius: inherit;
+        z-index: -1;
+        transition: $transition-1;
+      }
+    }
+  }
+}
+
+.errorMsg {
+  color: $bittersweet-shimmer;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+  #contactMeFormArea-thirdSection {
+    #contactMeFormArea-thirdSection-submit-button-area {
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #contactMeFormArea-firstSection {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #contactMeFormArea-thirdSection {
+    #contactMeFormArea-thirdSection-submit-button-area {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  #contactMeFormArea-thirdSection {
+    #contactMeFormArea-thirdSection-submit-button-area {
+      width: 100%;
+    }
+  }
+}

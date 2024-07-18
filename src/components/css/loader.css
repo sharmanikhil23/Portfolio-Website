@@ -1,0 +1,27 @@
+.loader {
+  border: 8px solid rgba(0, 0, 0, 0.1); /* Border width and color */
+  border-top: 8px solid #3498db; /* Top border color */
+  border-radius: 50%; /* Circle shape */
+  width: 50px; /* Loader width */
+  height: 50px; /* Loader height */
+  animation: spin 1s linear infinite, fadeIn 0.5s ease-in; /* Animations */
+  margin: 20% auto; /* Centering the loader */
+  opacity: 1; /* Start with opacity 1 */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start rotation */
+  }
+  100% {
+    transform: rotate(360deg); /* End rotation */
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  100% {
+    opacity: 1; /* End with opacity 1 */
+  }
+}/*# sourceMappingURL=loader.css.map */

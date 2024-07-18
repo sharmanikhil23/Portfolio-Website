@@ -1,0 +1,46 @@
+.container {
+  text-align: center;
+}
+
+.sending-animation {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.sending-animation span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #333;
+  border-radius: 50%;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.sending-animation span:nth-child(2) {
+  animation-delay: -0.4s;
+}
+
+.sending-animation span:nth-child(3) {
+  animation-delay: -0.8s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+.message {
+  font-size: 1.5em;
+}
+
+.success {
+  color: green;
+}
+
+.failure {
+  color: red;
+}/*# sourceMappingURL=sendindMessage.css.map */

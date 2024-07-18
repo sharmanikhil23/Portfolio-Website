@@ -1,0 +1,57 @@
+@import "../../scss/color.scss";
+
+#navBar {
+  width: 100%;
+
+  div {
+    position: absolute;
+    background-color: $onyx;
+    z-index: 1;
+    border: 1px solid $card-border-color;
+    display: flex;
+    flex-direction: row;
+    right: 0;
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    p {
+      font-size: 0.8rem;
+      color: $white-2;
+      margin: 0rem 1rem;
+      cursor: pointer;
+      transition: $transition-1;
+      &:hover {
+        color: $light-gray-70;
+      }
+    }
+  }
+}
+
+.navBar-item-selected {
+  color: $orange-yellow-crayola !important;
+}
+
+@media (max-width: 768px) {
+  #navBar {
+    background-color: $onyx;
+    opacity: 1;
+
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    div {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border: 1px solid $jet;
+      border-radius: 12px 12px 0 0;
+      box-shadow: $shadow-2;
+      z-index: 10;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
