@@ -5,14 +5,14 @@
   position: absolute;
   background-color: rgba(255, 255, 255, 0.3);
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   top: 0;
-  // left: 0;
   display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   #selected-project-cross {
+    z-index: 20;
     cursor: pointer;
     position: absolute;
     top: 0;
@@ -26,7 +26,7 @@
     }
   }
   #selected-project {
-    z-index: 6;
+    z-index: 10;
     opacity: 1;
     display: block;
     border-radius: 1rem;
