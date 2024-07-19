@@ -5,7 +5,6 @@
 }
 
 #left-part {
-  width: 100%;
   position: relative;
   background-color: hsl(240, 2%, 12%);
   position: sticky;

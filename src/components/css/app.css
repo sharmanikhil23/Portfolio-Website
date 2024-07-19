@@ -60,7 +60,7 @@ html body #root #main-start-1 #main-start-2 {
   #main-start-1 #main-start-2 {
     width: 95% !important;
     display: block !important;
-    padding: 1rem !important;
+    padding: 0.7rem 0.5rem 3rem !important;
   }
 }
 @media (min-width: 1024px) {
@@ -101,7 +101,7 @@ a {
     flex-direction: column !important;
     justify-content: flex-start;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
   }
 }
 @media (max-width: 768px) {
