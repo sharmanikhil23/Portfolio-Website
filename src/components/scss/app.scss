@@ -14,9 +14,11 @@
 }
 
 html {
+  overflow: hidden;
   font-size: 18px !important; /* Base font size */
   width: 100vw;
   body {
+    overflow: hidden;
     background-color: $main-1-background-color;
     color: $main-1-text-color;
     width: 100%;

@@ -20,10 +20,12 @@
 }
 
 html {
+  overflow: hidden;
   font-size: 18px !important; /* Base font size */
   width: 100vw;
 }
 html body {
+  overflow: hidden;
   background-color: rgb(18, 18, 18);
   color: #fafafa;
   width: 100%;
